@@ -1,0 +1,37 @@
+<!-- src/main/resources/templates/fragments/user_form.html -->
+<div th:fragment="userForm(actionUrl)">
+    <form th:action="@{${actionUrl}}" th:object="${user}" method="POST">
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="inputName"
+                   required th:field="*{nombre}" title="Solo letras del alfabeto">
+        </div>
+        <div class="mb-3">
+            <label for="inputFirstSurname" class="form-label">Primer Apellido</label>
+            <input type="text" class="form-control" id="inputFirstSurname"
+                   title="Solo letras del alfabeto" required th:field="*{apellido1}">
+        </div>
+        <div class="mb-3">
+            <label for="inputSecondSurname" class="form-label">Segundo Apellido</label>
+            <input type="text" class="form-control" id="inputSecondSurname"
+                   title="Solo letras del alfabeto" required th:field="*{apellido2}">
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" 
+                   placeholder="example_123@service.com" required th:field="*{email}">
+            <div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        </div>
+        <div class="mb-3">
+            <label for="inputPhone" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="inputPhone"
+                   title="El formato debe ser: 000000000" required th:field="*{telefono}">
+              <div class="text-danger" th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></div>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="activeChk" th:field="*{active}">
+            <label class="form-check-label" for="activeChk">Usuario Activo</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
