@@ -8,7 +8,7 @@
 Abre una terminal y ejecuta el siguiente comando:
 
 ```sh
-git clone https://github.com/usuario/repositorio.git
+git clone https://github.com/MMRichter/CRUD.git
 ```
 
 ### 2. Importar el proyecto en Eclipse
