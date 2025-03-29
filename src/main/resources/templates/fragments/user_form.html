@@ -5,16 +5,19 @@
             <label for="inputName" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="inputName"
                    required th:field="*{nombre}" title="Solo letras del alfabeto">
+            <div class="text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
         </div>
         <div class="mb-3">
             <label for="inputFirstSurname" class="form-label">Primer Apellido</label>
             <input type="text" class="form-control" id="inputFirstSurname"
                    title="Solo letras del alfabeto" required th:field="*{apellido1}">
+            <div class="text-danger" th:if="${#fields.hasErrors('apellido1')}" th:errors="*{apellido1}"></div>
         </div>
         <div class="mb-3">
             <label for="inputSecondSurname" class="form-label">Segundo Apellido</label>
             <input type="text" class="form-control" id="inputSecondSurname"
                    title="Solo letras del alfabeto" required th:field="*{apellido2}">
+            <div class="text-danger" th:if="${#fields.hasErrors('apellido2')}" th:errors="*{apellido2}"></div>
         </div>
         <div class="mb-3">
             <label for="inputEmail" class="form-label">Email</label>
