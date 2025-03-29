@@ -1,0 +1,30 @@
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+dependency-reduced-pom.xml
+release.properties
+pom.xml.asc
+*.jar
+*.war
+*.ear
+
+# Archivos de configuración de Eclipse
+.settings/
+.project
+.classpath
+
+# Archivos de compilación de Java
+*.class
+
+# Archivos de logs
+*.log
+
+*.iml
+.idea/
+
+.DS_Store
+Thumbs.db
+
+# Archivos generados por Lombok y MapStruct
+*.mapstruct
+
