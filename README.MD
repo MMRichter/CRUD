@@ -40,10 +40,10 @@ O desde Eclipse:
 
 ### 4. Acceder a la aplicación
 
-Por defecto, la aplicación estará disponible en:
+La configuracion del puerto se encuentra en application.properties. Por defecto, la aplicación estará disponible en:
 
 ```
-http://localhost:8080/
+http://localhost:8081/
 ```
 
 
